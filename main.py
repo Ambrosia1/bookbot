@@ -6,8 +6,10 @@ def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     num_words = get_word_count(text)
-    print(f"{num_words} words found in the document")
-    print(counting_characters(text))
+    print(f"Found {num_words} total words")
+    sorted_chars = get_sort_characters(counting_characters(text))
+    for item in sorted_chars:
+        print(f"{item['char']}: {item['num']}")
 
 def get_book_text(path):
     with open(path) as f:

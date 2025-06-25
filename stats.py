@@ -16,8 +16,8 @@ def get_sort_characters(characters):
     dict_to_list = []
     for char in characters:
         if char.isalpha():
-            char_list = characters[char]
-            dict1 = {"char": char, "num": char_list}
+            char_num = characters[char]
+            dict1 = {"char": char, "num": char_num}
             dict_to_list.append(dict1)
     dict_to_list.sort(reverse=True, key=sort_on)
     return dict_to_list
